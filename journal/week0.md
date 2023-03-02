@@ -1,6 +1,6 @@
 # Week 0 — Billing and Architecture
 
-Preparation
+# Preparation
 
 Create a Github Account. You will copy Andrew's repository with the right formatting of the repo and must be public.
 Create a Gitpod account and install the extension for your browser.
@@ -40,7 +40,7 @@ https://calculator.aws/#/
 
 
 
-Architecture Diagram
+# Architecture Diagram
 
 Logical Diagram - https://lucid.app/lucidchart/30f63eaa-cb19-4410-bccb-e3adf02a675d/edit?invitationId=inv_45d1e5d2-973d-45ec-8eb5-f24c4d2248c6
 
