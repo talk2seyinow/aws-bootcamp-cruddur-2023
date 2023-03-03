@@ -13,10 +13,11 @@
 - Ensure we can orchestrate multiple containers to run side by side
 - Mount directories so we can make changes while we code
 
+### Add Dockerfile
 
-## Add Dockerfile
-Create a file here: backend-flask/Dockerfile
+Create a file here: `backend-flask/Dockerfile`
 
+```dockerfile
 FROM python:3.10-slim-buster
 
 WORKDIR /backend-flask
@@ -30,3 +31,4 @@ ENV FLASK_ENV=development
 
 EXPOSE ${PORT}
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
+```
