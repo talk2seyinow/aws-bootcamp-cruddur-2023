@@ -1,3 +1,16 @@
+# Summary
+Watched livestreamed video about Docker and now I understand why it is necessary for microservice application and manage infrastructure. Learnt how to containerize and I did the following;
+-  created the docker configuration for the backend-flask, create a file called Dockerfile.
+- Created a docker-compose file to run multiple containers for backend-flask and frontend-react.js.
+
+I didn’t commit my immediately and had error while trying to sync the changes. I encountered the error: failed to push some refs to [remote repo] error. Then I googled for some answers then poked around gitpod then I used git —help on the terminal and found out my local branch is a commit behind the remote branch so I used git pull —rebase.
+
+update open api to add notification
+Created the endpoint for backend notification. Had an error with indentation and was able to fix it. Implemented frontend notification page. Read more about creating flask app
+
+Added Dynamodb Local and Postgres, installed Postgres client to gitpod. I don’t not really understand Dynamodb and Postgres part of the task a lot but e=will read up on databases.
+
+
 # Week 1 — App Containerization
 
 ## To Do
