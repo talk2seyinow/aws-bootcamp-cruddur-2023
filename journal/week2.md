@@ -92,7 +92,8 @@ RequestsInstrumentor().instrument()
 ```
 
 Added these ports to our gitpod.yml file
-```ports:
+```
+ports:
   - name: frontend
     port: 3000
     onOpen: open-browser
