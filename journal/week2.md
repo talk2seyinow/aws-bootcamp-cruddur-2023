@@ -28,3 +28,13 @@ Monitoring is tooling or a technical solution that allows teams to watch and und
 
 
 Instrumentation is what helps you to create or produce logs metrics traces.
+
+
+
+Log into honeycomb.io,create a new enviroment, copy your API key and create the gitpod env var
+```
+export HONEYCOMB_API_KEY=""
+export HONEYCOMB_SERVICE_NAME="Cruddur"
+gp env HONEYCOMB_API_KEY=""
+gp env HONEYCOMB_SERVICE_NAME="Cruddur"
+```
