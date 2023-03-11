@@ -17,8 +17,7 @@ tasks:
 vscode:
   extensions:
     - 42Crunch.vscode-openapi
-    - cweijan.vscode-postgresql-client2
-
+    
 ports:
   - name: frontend
     port: 3000
@@ -30,4 +29,3 @@ ports:
   - name: xray-daemon
     port: 2000
     visibility: public
-
