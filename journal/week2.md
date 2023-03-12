@@ -143,3 +143,15 @@ span.set_attribute("app.result_lenght", len(results))
 
 
 ### AWS X-ray
+add to app.py file
+```py
+# X-RAY ----------
+from aws_xray_sdk.core import xray_recorder
+from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
+
+
+# X-RAY ----------
+xray_url = os.getenv("AWS_XRAY_URL")
+xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
+
+```
