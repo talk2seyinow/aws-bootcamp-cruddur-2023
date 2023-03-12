@@ -105,3 +105,8 @@ ports:
     port: 2000
     visibility: public
 ```
+
+## Tag homework
+
+git tag week-(number)
+git push --tags
