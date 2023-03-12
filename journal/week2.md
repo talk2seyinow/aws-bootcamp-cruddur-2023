@@ -111,60 +111,6 @@ ports:
 git tag week-(number)
 git push --tags
 
-## Install Honeycomb
-
-On the backend-flask/requirements.text, add the following code
-```
-opentelemetry-api 
-opentelemetry-sdk 
-opentelemetry-exporter-otlp-proto-http 
-opentelemetry-instrumentation-flask 
-opentelemetry-instrumentation-requests
-```
-
-install the dependency. this will necessary just this time as it will be run via docker compose
-```
-pip install -r requirements.txt
-```
-
-Add the following on the app.py
-```
-# Honeycomb
-from opentelemetry import trace
-from opentelemetry.instrumentation.flask import FlaskInstrumentor
-from opentelemetry.instrumentation.requests import RequestsInstrumentor
-from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
-from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor
-
-# Honeycomb
-# Initialize tracing and an exporter that can send data to Honeycomb
-provider = TracerProvider()
-processor = BatchSpanProcessor(OTLPSpanExporter())
-provider.add_span_processor(processor)
-trace.set_tracer_provider(provider)
-tracer = trace.get_tracer(__name__)
-
-# Honeycomb
-# Initialize automatic instrumentation with Flask
-FlaskInstrumentor().instrument_app(app)
-RequestsInstrumentor().instrument()
-```
-
-
-
-from the docker-compose.yml, add the following code for the env variables
-```
-OTEL_SERVICE_NAME: 'backend-flask'
-OTEL_EXPORTER_OTLP_ENDPOINT: "https://api.honeycomb.io"
-OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=${HONEYCOMB_API_KEY}"
-```
-
-from honeycomb.io, grab the unique code and create the gitpod env var
-```
-gp env HONEYCOMB_API_KEY=""
-```
-
 
 To create span and attribute, add the following code on the home_activities.py
 ```
@@ -194,3 +140,6 @@ span.set_attribute("app.result_lenght", len(results))
       cd frontend-react-js
       npm i
  ```
+
+
+### AWS X-ray
