@@ -175,6 +175,10 @@ create x-ray j.son file for setting up sampling rule
 }
 ```
 
-create x-ray group
+create x-ray group to group traces
 
 ```aws xray create-group    --group-name "Cruddur"    --filter-expression "service(\"backend-flask\")" ```
+
+then create a sampling rule
+
+```aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json```
