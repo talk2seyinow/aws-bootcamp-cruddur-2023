@@ -181,4 +181,4 @@ create x-ray group to group traces
 
 then create a sampling rule
 
-```aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json```
+```aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json``` 
