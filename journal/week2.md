@@ -182,3 +182,18 @@ create x-ray group to group traces
 then create a sampling rule
 
 ```aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json``` 
+
+Add x-ray daemon to docker compose file that listens for traffic on UDP port 2000
+
+ ```
+ xray-daemon:
+    image: "amazon/aws-xray-daemon"
+    environment:
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+      AWS_REGION: "us-east-1"
+    command:
+      - "xray -o -b xray-daemon:2000"
+    ports:
+      - 2000:2000/udp 
+      ``` 
