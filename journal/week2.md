@@ -198,8 +198,7 @@ Add x-ray daemon to docker compose file that listens for traffic on UDP port 200
       - 2000:2000/udp 
    ``` 
       
-      added 2 env vars to backend-flask in docker compose file
-     ```
-      AWS_XRAY_URL: "*4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}*"
+  added 2 env vars to backend-flask in docker compose file
+     ``` AWS_XRAY_URL: "*4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}*"
       AWS_XRAY_DAEMON_ADDRESS: "xray-daemon:2000"
             ``` 
