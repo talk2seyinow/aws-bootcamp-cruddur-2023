@@ -11,3 +11,6 @@ flask-cors
 
     watchtower
 
+    blinker
+    rollbar
+
