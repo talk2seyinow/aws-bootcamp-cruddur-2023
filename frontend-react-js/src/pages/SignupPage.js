@@ -43,7 +43,6 @@ export default function SignupPage() {
     return false
   }
 
-
   const name_onchange = (event) => {
     setName(event.target.value);
   }
